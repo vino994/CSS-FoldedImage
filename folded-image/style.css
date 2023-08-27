@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box{
+    width: 80%;
+    height: 50vh;
+   
+    display: flex;
+    position: relative;
+}
+.box .img{
+    flex: 0 0 20%;
+    background: url(1.jpg);
+    background-size: 500%;
+    background-size: cover;
+    transition: all 1s ease-in-out;
+    cursor: pointer;
+}
+.box .img:nth-child(1){
+   
+    background-position: 0% center;
+}
+.box .img:nth-child(2){
+    
+    background-position: 25% center;
+}
+.box .img:nth-child(3){
+      background-position: 50% center;
+}
+.box .img:nth-child(4){
+
+    background-position: 75% center;
+}
+.box .img:nth-child(5){
+
+    background-position: 100% center;
+}
+body:hover .box .img:nth-child(odd){
+    transform: skewY(26deg);
+}
+body:hover .box .img:nth-child(even){
+    transform: skewY(-26deg);
+}
